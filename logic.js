@@ -102,3 +102,15 @@ const questionList = [
     { text: "ハンバーガー", typingText: new TypingText("ハンバーガー") },
 ];
 
+function createRandomQuestionList(count) {
+    const tmpQuestionList = [...questionList];
+    const randomQuestionList = [];
+
+    for (let i = 0; i < count; i++) {
+        const randomIndex = Math.floor(Math.random() * tmpQuestionList.length);
+        const question = tmpQuestionList.splice(randomIndex, 1)[0];
+        randomQuestionList.push(question);
+    }
+    
+    return randomQuestionList;
+}
