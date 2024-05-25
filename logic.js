@@ -1,5 +1,5 @@
 
-const questionList = [
+const allQuestionList = [
     { text: "りんご", typingText: new TypingText("りんご") },
     { text: "バナナ", typingText: new TypingText("バナナ") },
     { text: "オレンジ", typingText: new TypingText("オレンジ") },
@@ -103,7 +103,7 @@ const questionList = [
 ];
 
 function createRandomQuestionList(count) {
-    const tmpQuestionList = [...questionList];
+    const tmpQuestionList = [...allQuestionList];
     const randomQuestionList = [];
 
     for (let i = 0; i < count; i++) {
