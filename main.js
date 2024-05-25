@@ -1,7 +1,11 @@
 
 const domText = document.querySelector("#text");
+const domRomanContainer = document.querySelector("#roman-container");
 const domRoman1 = document.querySelector("#roman1");
 const domRoman2 = document.querySelector("#roman2");
+const domResult = document.querySelector("#result");
+
+domResult.style.display = "none";
 
 let questionList = createRandomQuestionList(10);
 let questionIndex = 0;
@@ -51,6 +55,7 @@ function gameMain(e) {
                 domRoman1.innerText += e.key;
                 domRoman2.innerText = "";
                 window.onkeydown = null;
+                displayResult();
                 return;
             }
 
@@ -63,5 +68,13 @@ function gameMain(e) {
 
             return;
     }
+}
+
+function displayResult() {
+    domText.innerText = "リザルト";
+    domRomanContainer.style.display = "none";
+    domResult.style.display = "";
+
+    domResult.innerText = "hogehoge";
 }
 
