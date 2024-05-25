@@ -81,7 +81,7 @@ const allQuestionList = [
     { text: "ひじき", typingText: new TypingText("ひじき") },
     { text: "サバ缶", typingText: new TypingText("サバかん") },
     { text: "ツナ缶", typingText: new TypingText("ツナかん") },
-    { text: "うずら卵", typingText: new TypingText("うずらたまご") },
+    { text: "うずらの卵", typingText: new TypingText("うずらのたまご") },
     { text: "鳥の唐揚げ", typingText: new TypingText("とりのからあげ") },
     { text: "天ぷら", typingText: new TypingText("てんぷら") },
     { text: "すき焼き", typingText: new TypingText("すきやき") },
