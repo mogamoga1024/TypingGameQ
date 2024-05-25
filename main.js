@@ -99,12 +99,11 @@ function gameEnd() {
     domResult.style.display = "";
 
     const epm = missCount / (elapsedTime / (1000 * 60));
-    const spm = (typeCount - missCount) / (elapsedTime / (1000 * 60));
     const kpm = typeCount / (elapsedTime / (1000 * 60));
 
-    domResult.innerText =  `誤タイプ率:${floor(missCount / typeCount * 100, 2)}%\n`;
+    domResult.innerText  = `スコア:${floor(kpm * Math.pow(1 - missCount / typeCount, 3), 2)}\n`;
     domResult.innerText += `クリアタイム:${floor(elapsedTime / 1000, 2)}秒\n`;
-    domResult.innerText += `1分毎の正タイプ数:${floor(spm, 2)}\n`;
+    domResult.innerText += `誤タイプ率:${floor(missCount / typeCount * 100, 2)}%\n`;
+    domResult.innerText += `1分毎のタイプ数:${floor(kpm, 2)}\n`;
     domResult.innerText += `1分毎の誤タイプ数:${floor(epm, 2)}\n`;
-    domResult.innerText += `スコア:${floor(kpm / 5 * Math.pow(1 - missCount / typeCount, 3), 2)}\n`;
 }
