@@ -1,4 +1,8 @@
 
+* {
+  font-variant-ligatures: none;
+}
+
 #text {
   font-size: 2rem;
 }
